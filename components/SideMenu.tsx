@@ -29,7 +29,11 @@ export default async function SideMenu() {
 
   return seasonsData.map((episodes, idx) => {
     return (
-      <SideMenuSeason key={idx} season={idx} episodes={episodes.episodes} />
+      <SideMenuSeason
+        key={episodes.seasonId}
+        season={idx}
+        episodes={episodes.episodes}
+      />
     );
   });
 }

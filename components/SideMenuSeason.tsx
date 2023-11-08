@@ -23,13 +23,9 @@ export default function SideMenuSeason({
         <div className="ml-4">
           {episodes.map((episode, idx) => {
             return (
-              <>
-                <div>
-                  <Link key={episode} href={`/episode/${episode}`}>
-                    Episode{idx + 1}
-                  </Link>
-                </div>
-              </>
+              <div key={episode}>
+                <Link href={`/episode/${episode}`}>Episode{idx + 1}</Link>
+              </div>
             );
           })}
         </div>

@@ -1,4 +1,4 @@
-export default async function Page(params: {
+export default async function Layout(params: {
   children: React.ReactNode;
   dialogue: React.ReactNode;
   chat: React.ReactNode;
