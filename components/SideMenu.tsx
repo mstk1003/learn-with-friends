@@ -44,12 +44,15 @@ export default async function SideMenu() {
  * @returns
  */
 const getEpisodeList = (seasonId: string) => {
-  return fetch(`${process.env.URL}/converted_friends_data/${seasonId}.json`, {
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  })
+  return fetch(
+    `${process.env.LOCAL_URL}/converted_friends_data/${seasonId}.json`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    }
+  )
     .then(function (response) {
       return response.json();
     })

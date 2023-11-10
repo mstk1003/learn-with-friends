@@ -69,7 +69,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   );
 }
 const getSeasonEpisodes = (id: string) => {
-  return fetch(`${process.env.URL}/converted_friends_data/${id}.json`, {
+  return fetch(`${process.env.LOCAL_URL}/converted_friends_data/${id}.json`, {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",

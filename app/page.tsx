@@ -35,12 +35,16 @@ export default async function Home() {
 }
 
 const getSeasonEpisodes = (seasonId: string) => {
-  return fetch(`${process.env.URL}/converted_friends_data/${seasonId}.json`, {
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  })
+  console.log("hello", process.env.LOCAL_URL);
+  return fetch(
+    `${process.env.LOCAL_URL}/converted_friends_data/${seasonId}.json`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    }
+  )
     .then(function (response) {
       return response.json();
     })
