@@ -21,7 +21,7 @@ type Episode = {
 // prompt例：「ドラマFriendsの${シーズン1}${エピソード1}の${speakers}のセリフ「${dialogue}」の背景と意味を教えてください。」
 
 export default async function Page({ params }: { params: { id: string } }) {
-  return <div>dialogue page</div>
+  return <div>dialogue page</div>;
   // const episode = await getSeasonEpisodes(params.id);
   // console.log(episode.title);
 
@@ -67,7 +67,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   //       );
   //     })}
   //   </>
-  );
+  // );
 }
 const getSeasonEpisodes = (id: string) => {
   return fetch(`${process.env.LOCAL_URL}/converted_friends_data/${id}.json`, {
