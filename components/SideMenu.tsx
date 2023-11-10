@@ -21,21 +21,22 @@ const seasons = [
 
 // サイドメニュー
 export default async function SideMenu() {
-  const seasonsData = [] as Season[];
-  for (let idx = 0; idx < seasons.length; idx++) {
-    const res = await getEpisodeList(seasons[idx]);
-    seasonsData.push(res);
-  }
+  return <div>SideMenu</div>;
+  // const seasonsData = [] as Season[];
+  // for (let idx = 0; idx < seasons.length; idx++) {
+  //   const res = await getEpisodeList(seasons[idx]);
+  //   seasonsData.push(res);
+  // }
 
-  return seasonsData.map((episodes, idx) => {
-    return (
-      <SideMenuSeason
-        key={episodes.seasonId}
-        season={idx}
-        episodes={episodes.episodes}
-      />
-    );
-  });
+  // return seasonsData.map((episodes, idx) => {
+  //   return (
+  //     <SideMenuSeason
+  //       key={episodes.seasonId}
+  //       season={idx}
+  //       episodes={episodes.episodes}
+  //     />
+  //   );
+  // });
 }
 
 /**
